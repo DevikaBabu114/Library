@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+}
+
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.sidebar ul li a:hover {
+    background-color: #2980b9;
+}
+
+
+/* Main content styling */
+.content {
+    width: calc(100% - 250px);
+    padding: 20px;
+    margin-left: 250px;
+}
+
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+
+.profile a {
+    margin-left: 15px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.main-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+#search-bar, #category-bar {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#search-btn:hover {
+    background-color: #3498db;
+}
+
+
+/* Grid for book results */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns in a row */
+    gap: 20px;
+}
+
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.grid-item h3, .grid-item p {
+    margin-bottom: 10px;
+}
+
+
+.reserve-btn, .request-btn {
+    padding: 10px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.reserve-btn:hover, .request-btn:hover {
+    background-color: #3498db;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the buttons */
+    margin-top: 10px;
+}
+
+
+
+

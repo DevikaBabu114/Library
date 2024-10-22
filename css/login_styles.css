@@ -1,0 +1,92 @@
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #9a968f, #384038); /* Background gradient */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login box */
+.login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Login heading */
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #0d0f10;
+    font-size: 24px;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Input labels */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Text input fields */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #3498db;
+}
+
+/* Login button */
+.btn-login {
+    background-color: #0d0d0e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-login:hover {
+    background-color: #567493;
+}
+
+/* Error message */
+.error-message {
+    color: red; /* Ensure this is applied correctly */
+    margin-bottom: 15px; /* Space below the error message */
+    font-size: 14px; /* Font size */
+    text-align: center; /* Center align the message */
+    font-weight: bold; /* Make the font bold */
+}
