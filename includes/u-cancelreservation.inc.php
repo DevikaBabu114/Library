@@ -98,7 +98,7 @@ if (isset($_POST['reservation_id'])) {
 
 
         // Redirect back to the reservation page with a success message
-        header("Location: ../viewreservation.php?cancel=success");
+        header("Location: ../viewreservations.php?cancel=success");
         exit();
 
 
@@ -106,12 +106,12 @@ if (isset($_POST['reservation_id'])) {
         // Roll back the transaction if something went wrong
         $pdo->rollBack();
         // Redirect with an error message
-        header("Location: ../viewreservation.php?cancel=error&message=" . urlencode($e->getMessage()));
+        header("Location: ../viewreservations.php?cancel=error&message=" . urlencode($e->getMessage()));
         exit();
     }
 } else {
     // Redirect with an error message if no reservation_id is provided
-    header("Location: ../viewreservation.php?cancel=error");
+    header("Location: ../viewreservations.php?cancel=error");
     exit();
 }
 ?>

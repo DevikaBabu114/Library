@@ -28,16 +28,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Generate a unique user_id
         $user_id = generateUniqueUserId($pdo);
-
+         // Insert user details into the user_details table using prepared statements
+         $query1 = "INSERT INTO user_details (user_id, name, email, phone_no) VALUES (?, ?, ?, ?)";
+         $stmt1 = $pdo->prepare($query1);
+         $stmt1->execute([$user_id, $name, $email, $phone_no]);
+         
         // Insert into the user_table with an empty password initially
         $query2 = "INSERT INTO user_table (user_id, pwd, role) VALUES (?, '', 'user')";
         $stmt2 = $pdo->prepare($query2);
         $stmt2->execute([$user_id]);
 
-        // Insert user details into the user_details table using prepared statements
-        $query1 = "INSERT INTO user_details (user_id, name, email, phone_no) VALUES (?, ?, ?, ?)";
-        $stmt1 = $pdo->prepare($query1);
-        $stmt1->execute([$user_id, $name, $email, $phone_no]);
+       
 
         // Redirect to password entry page
         header("Location: ../set_password.php?user_id=$user_id");

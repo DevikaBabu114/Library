@@ -269,7 +269,7 @@ if (isset($_SESSION['error_message'])) {
 
 
 
-            <form id="passwordForm" action="includes/manageusers.inc.php" method="POST">
+            <form id="passwordForm" action="includes/manageuser.inc.php" method="POST">
                 <h1 style="color: black;">Set Password</h1>
                 <p style="font-weight: bold; color:black;" >User ID: <strong><?php echo htmlspecialchars($user_id); ?></strong></p>
                 <br>

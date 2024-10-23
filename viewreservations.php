@@ -248,6 +248,7 @@ header {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     min-height: 300px;
+    min-width: 450px;
 }
 
 
@@ -323,7 +324,12 @@ h2 {
 }
 
 
-
+.reservation-item{
+    background-color:white;
+    min-width:450px;
+    padding:30px;
+    
+}
 
 
 
@@ -396,7 +402,7 @@ h2 {
             <?php if (isset($reservation['status']) && $reservation['status'] === 'active'): ?>
                 <form action="includes/u-cancelreservation.inc.php" method="POST">
                     <input type="hidden" name="reservation_id" value="<?= htmlspecialchars($reservation['reservation_id']) ?>">
-                    <button type="submit" class="cancel-btn">Cancel Reservation</button>
+                    <button type="submit" class="cancel-btn">Cancel</button>
                 </form>
             <?php endif; ?>
         </div>
