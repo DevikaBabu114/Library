@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=librarydatabase";
+$dsn = "mysql:host=localhost;dbname=libary";
 $dbusername = "root";
 $dbpassword = "";
 
